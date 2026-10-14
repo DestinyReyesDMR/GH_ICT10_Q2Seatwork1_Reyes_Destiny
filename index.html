@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMARTS Club Checker - Candidate Verification System</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/b8/98/63/b89863819c8b9988282a76b9436299e0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card {
+            background-color: rgba(253, 246, 238, 0.92);
+            border: 2px solid #8c6239;
+            border-radius: 12px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 8px 20px rgba(92, 58, 33, 0.2);
+            text-align: center;
+            color: #3e2723;
+        }
+
+        h2 {
+            color: #5c3a21;
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: #795548;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 0.85rem;
+            color: #5d4037;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #fffaf0;
+            border: 1px solid #bcaaa4;
+            border-radius: 4px;
+            color: #3e2723;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"]:focus {
+            border-color: #8c6239;
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8c6239;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #5c3a21;
+        }
+
+        #result-area {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #d7ccc8;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-break: break-word;
+            color: #4e342e;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>COMMARTS CLUB CHECKER</h2>
+        <div class="subtitle">Candidate Verification System</div>
+        
+        <div class="input-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter first name">
+        </div>
+
+        <div class="input-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter last name">
+        </div>
+
+
+        <button py-click="verify_candidate">ENTER</button>
+
+        <div id="result-area">Result will appear here...</div>
+    </div>
+
+  
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
